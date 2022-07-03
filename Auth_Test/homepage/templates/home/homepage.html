@@ -1,0 +1,17 @@
+{% extends "home/layout.html" %}
+
+{% block body %}
+
+    <h1>HOME PAGE</h1>
+
+    {% if user.is_authenticated %}
+        <ul>
+            <li>Username: {{ request.user.username }}</li>
+            <li>Email: {{ request.user.email }}</li>
+        </ul>
+    {% else %}
+        <div>click here to login</div>
+    {% endif %}
+            
+
+{% endblock %}
