@@ -12,7 +12,7 @@ from users.forms import RegistrationForm
 def index(request):
     if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse("login"))
-    return render(request, "users/user.html")
+    return render(request, "accounts/user.html")
         #homepage or maybe profile
 
 def login_view(request):
