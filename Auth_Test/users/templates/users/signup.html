@@ -1,3 +1,5 @@
+{% load socialaccount %}
+{% providers_media_js %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -98,11 +100,9 @@
 
 
     <div id="fb-root"></div>
+    <a href="{% provider_login_url "google" method="js_sdk" %}">Google</a>
+    <a href="{% provider_login_url "facebook" method="oauth2" %}">Facebook OAuth2</a>
 
-    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
-
-
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v14.0&appId=377960577655734&autoLogAppEvents=1" nonce="VOX06P0o"></script>
 
 </body>
 
