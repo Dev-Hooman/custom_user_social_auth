@@ -24,13 +24,13 @@ def login_view(request):
             login(request, user)
             return HttpResponseRedirect(reverse("index"))
         else:                     #if authentication fails              
-            return render(request, "users/login.html", {
+            return render(request, "accounts/login.html", {
 
                 "message" : "invalid credentials"
                 
             } )
     else:
-        return render(request, "users/login.html")
+        return render(request, "accounts/login.html")
 
 def signup_view(request, *args, **kwargs):
     user = request.user
@@ -58,12 +58,12 @@ def signup_view(request, *args, **kwargs):
     else:
         form = RegistrationForm()
         context['registration_form'] = form  # use it for validation errors
-    return render(request, "users/signup.html",context)
+    return render(request, "accounts/signup.html",context)
 
     
 def logout_view(request):
     logout(request)
-    return render(request, "users/login.html" , 
+    return render(request, "accounts/login.html" , 
     {
         "message" : "Logged out."
     }

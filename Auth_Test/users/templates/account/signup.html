@@ -1,5 +1,3 @@
-{% load socialaccount %}
-{% providers_media_js %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,16 +90,9 @@
                 <button style="padding: 3px;  background-color: transparent; border: 0px solid ; color: #03e9f4; ">SUBMIT</button>
             </a>
 
-
         </form>
         <center style="color: #03e9f4;">Already an account <a href="\login"> Login </a></div>
     </center>
-
-
-
-    <div id="fb-root"></div>
-    <a href="{% provider_login_url "google" method="js_sdk" %}">Google</a>
-    <a href="{% provider_login_url "facebook" method="oauth2" %}">Facebook OAuth2</a>
 
 
 </body>
